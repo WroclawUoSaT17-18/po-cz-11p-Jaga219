@@ -1,0 +1,1 @@
+Wyszukiwarka filmów. Dane pobierane w formacie .json z rest api [themoviedb](https://developers.themoviedb.org/3/)
