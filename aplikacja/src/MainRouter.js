@@ -1,9 +1,10 @@
 import React from 'react';
 import { Router, Switch, Route, Link, Redirect  } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import MoviesPage from './Components/movies/MoviesPage';
-import createBrowserHistory from 'history/createBrowserHistory';
+import MovieDetails from './Components/movies/MovieDetails';
 
 const { Header, Footer, Content } = Layout;
 const history = createBrowserHistory();
@@ -31,11 +32,13 @@ const Main = () => (
                     </Menu>
                 </Header>
                 <Content style={{ padding: '0 50px', background: '#F0A7DC' }} >
-                    <div style={{ background: '#FFF', padding: 24, minHeight: 600 }}>
-                        <Redirect to="/movies"/>
+                    <div style={{ background: '#EEE', padding: 24, minHeight: 600 }}>
                         <Switch>
                             <Route exact path='/movies' component={MoviesPage}/>
-                            {/*<Route path='/schedule' component={Schedule}/>*/}
+                            <Route exact path='/movie/:id' component={MovieDetails}/>
+                            <Route path='/discover' component={()=> {}}/>
+                            <Route path='/series' component={()=> {}}/>
+                            <Redirect to="/movie/123"/>
                         </Switch>
                     </div>
                 </Content>

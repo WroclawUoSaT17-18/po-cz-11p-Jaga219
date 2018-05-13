@@ -19,7 +19,7 @@ class MoviesInTheatre extends Component {
         const dateInMonth = new Date(dateInMonthInMiliSecounds).toISOString().substr(0, 11);
         const server = 'https://api.themoviedb.org/3/discover/movie?api_key=66eeb56ea4c4c8e8b9edbaaea76e7b7e';
 
-        fetch(`${server}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=${dateMonthAgo}&primary_release_date.lte=${dateInMonth}`)
+        fetch(`${server}&language=pl&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=${dateMonthAgo}&primary_release_date.lte=${dateInMonth}`)
             .then((response) => {
                 return response.json();
             })
