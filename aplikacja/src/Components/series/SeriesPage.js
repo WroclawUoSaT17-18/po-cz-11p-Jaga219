@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import MoviesInTheatre from './MoviesInTheatre';
-import MovieFinder from './MovieFinder';
+import SeriesFinder from './SeriesFinder';
+import PopularSeries from './PopularSeries';
 
-class MoviesPage extends Component {
+class SeriesPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,11 +13,11 @@ class MoviesPage extends Component {
     render() {
         return (
             <div>
-                <MovieFinder/>
-                <MoviesInTheatre/>
+                <SeriesFinder/>
+                <PopularSeries/>
             </div>
         );
     }
 }
 
-export default MoviesPage;
+export default SeriesPage;

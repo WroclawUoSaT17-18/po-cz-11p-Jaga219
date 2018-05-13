@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class MovieBlock extends Component {
+class Details extends Component {
 
     render() {
         const details = this.props.details;
@@ -39,4 +39,4 @@ class MovieBlock extends Component {
     }
 }
 
-export default MovieBlock;
+export default Details;

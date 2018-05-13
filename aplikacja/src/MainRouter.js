@@ -4,7 +4,9 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import MoviesPage from './Components/movies/MoviesPage';
+import SeriesPage from './Components/series/SeriesPage';
 import MovieDetails from './Components/movies/MovieDetails';
+import SeriesDetails from './Components/series/SeriesDetails';
 
 const { Header, Footer, Content } = Layout;
 const history = createBrowserHistory();
@@ -36,8 +38,9 @@ const Main = () => (
                         <Switch>
                             <Route exact path='/movies' component={MoviesPage}/>
                             <Route exact path='/movie/:id' component={MovieDetails}/>
-                            <Route path='/discover' component={()=> {}}/>
-                            <Route path='/series' component={()=> {}}/>
+                            {/*<Route path='/discover' component={()=> {}}/>*/}
+                            <Route exact path='/series' component={SeriesPage}/>
+                            <Route exact path='/series/:id' component={SeriesDetails}/>
                             <Redirect to="/movies"/>
                         </Switch>
                     </div>

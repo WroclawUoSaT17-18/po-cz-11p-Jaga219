@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import DetailsPage from '../common/DetailsPage';
+import DetailsPage from './Details';
 
 class MovieDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
             movieDetails: [],
-            movieId: ''
         }
     }
 
