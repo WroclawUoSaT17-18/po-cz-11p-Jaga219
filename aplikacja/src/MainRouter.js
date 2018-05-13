@@ -38,7 +38,7 @@ const Main = () => (
                             <Route exact path='/movie/:id' component={MovieDetails}/>
                             <Route path='/discover' component={()=> {}}/>
                             <Route path='/series' component={()=> {}}/>
-                            <Redirect to="/movie/123"/>
+                            <Redirect to="/movies"/>
                         </Switch>
                     </div>
                 </Content>
