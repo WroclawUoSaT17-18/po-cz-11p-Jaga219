@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-class MoviesInTheatre extends Component {
-
+class MovieBlock extends Component {
     renderMovies = (movies) => movies.map(function(movie){
         return <div
             key={movie.id}
@@ -12,7 +11,7 @@ class MoviesInTheatre extends Component {
     });
 
     render() {
-        var movies =this.props.movies;
+        const movies =this.props.movies;
 
         return (
             <div>
@@ -22,4 +21,4 @@ class MoviesInTheatre extends Component {
     }
 }
 
-export default MoviesInTheatre;
+export default MovieBlock;

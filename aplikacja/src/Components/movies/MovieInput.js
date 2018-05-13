@@ -18,7 +18,7 @@ class MovieInput extends Component {
                 value + value + value,
             ],
         });
-    }
+    };
 
     render() {
         const { dataSource } = this.state;
