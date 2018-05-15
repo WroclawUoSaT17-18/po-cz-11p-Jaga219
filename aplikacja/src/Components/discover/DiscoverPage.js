@@ -58,18 +58,34 @@ class DiscoverPage extends Component {
     };
 
     render() {
+        const filterStyle = {
+            paddingRight: '10px'
+        };
+
         return (
             <div>
                 <h2>Odkryj nowe filmy</h2>
-                <Year
-                    onYearChange={this.onYearChange}
-                />
-                <SortBy
-                    onSortByChange={this.sortByChange}
-                />
-                <Genres
-                    onGenreChange={this.onGenreChange}
-                />
+                <div style={{
+                    display: 'inline-flex',
+                    padding: '20px 0px'
+                }}
+                >
+                    <div style={filterStyle}>
+                        <Year
+                            onYearChange={this.onYearChange}
+                        />
+                    </div>
+                    <div style={filterStyle}>
+                        <SortBy
+                            onSortByChange={this.sortByChange}
+                        />
+                    </div>
+                    <div style={filterStyle}>
+                        <Genres
+                            onGenreChange={this.onGenreChange}
+                        />
+                    </div>
+                </div>
                 <MovieBlock
                     movies={this.state.movies}
                 />

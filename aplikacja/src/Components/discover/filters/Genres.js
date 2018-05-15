@@ -9,7 +9,6 @@ class Genres extends Component {
         return (
             <div>
                 <Select
-                    defaultValue=""
                     showSearch
                     style={{width: 200}}
                     onChange={this.props.onGenreChange}
