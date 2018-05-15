@@ -24,7 +24,6 @@ class MovieBlock extends Component {
 
     render() {
         const movies = this.props.movies;
-
         return (
             <div style={{justifyContent: ''}}>
                 {this.renderMovies(movies)}
