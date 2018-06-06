@@ -35,26 +35,31 @@ class DiscoverPage extends Component {
             });
     };
 
-
     onYearChange = (value) => {
         this.setState({
             year: value
-        });
-        this.fetchSuggestions();
+            }, () => {
+                this.fetchSuggestions();
+            }
+        );
     };
 
     sortByChange = (value) => {
         this.setState({
             sortBy: value
-        });
-        this.fetchSuggestions();
+            }, () => {
+                this.fetchSuggestions();
+            }
+        );
     };
 
     onGenreChange = (value) => {
         this.setState({
-            sortBy: value
-        });
-        this.fetchSuggestions();
+                sortBy: value
+            }, () => {
+                this.fetchSuggestions();
+            }
+        );
     };
 
     render() {
